@@ -1,0 +1,1 @@
+[18-Sep-2017 06:31:31 UTC] WordPress database error Unknown column 'des_id' in 'where clause' for query SELECT * FROM `im_discussion_comment` WHERE `des_id` = 19

@@ -1,0 +1,1 @@
+[01-Sep-2017 10:59:14 UTC] WordPress database error Unknown column 'e' in 'where clause' for query SELECT count(`id`) FROM `im_language` WHERE `id` = e

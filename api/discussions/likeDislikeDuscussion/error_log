@@ -1,0 +1,8 @@
+[16-Sep-2017 07:11:27 UTC] WordPress database error Unknown column 'feed_id' in 'field list' for query INSERT INTO `im_discussion_like` (`feed_id`, `user_id`, `created_at`) VALUES ('1', 1, '1505545887')
+[16-Sep-2017 07:11:47 UTC] WordPress database error Unknown column 'feed_id' in 'field list' for query INSERT INTO `im_discussion_like` (`feed_id`, `user_id`, `created_at`) VALUES ('1', 1, '1505545907')
+[16-Sep-2017 07:12:39 UTC] WordPress database error Unknown column 'created_at' in 'field list' for query INSERT INTO `im_discussion_like` (`dis_id`, `user_id`, `created_at`) VALUES ('1', 1, '1505545959')
+[16-Sep-2017 07:12:43 UTC] WordPress database error Unknown column 'created_at' in 'field list' for query INSERT INTO `im_discussion_like` (`dis_id`, `user_id`, `created_at`) VALUES ('1', 1, '1505545963')
+[16-Sep-2017 10:46:13 UTC] WordPress database error Unknown column 'created_ad' in 'field list' for query INSERT INTO `im_discussion_unlike` (`dis_id`, `user_id`, `created_ad`) VALUES ('20', 1, '1505558773')
+[16-Sep-2017 10:48:57 UTC] WordPress database error Unknown column 'created_ad' in 'field list' for query INSERT INTO `im_discussion_unlike` (`dis_id`, `user_id`, `created_ad`) VALUES ('20', 1, '1505558937')
+[18-Sep-2017 13:58:23 UTC] WordPress database error Unknown column 'created_ad' in 'field list' for query INSERT INTO `im_discussion_unlike` (`dis_id`, `user_id`, `created_ad`) VALUES ('21', 1, '1505743103')
+[18-Sep-2017 14:00:16 UTC] WordPress database error Unknown column 'created_ad' in 'field list' for query INSERT INTO `im_discussion_unlike` (`dis_id`, `user_id`, `created_ad`) VALUES ('21', 1, '1505743216')

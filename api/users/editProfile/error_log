@@ -1,0 +1,7 @@
+[28-Oct-2017 06:30:46 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/imarkclients/public_html/sonacircle/api/users/editProfile/index.php on line 38
+[28-Oct-2017 06:31:01 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/imarkclients/public_html/sonacircle/api/users/editProfile/index.php on line 38
+[28-Oct-2017 06:31:14 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/imarkclients/public_html/sonacircle/api/users/editProfile/index.php on line 38
+[28-Oct-2017 06:50:06 UTC] PHP Warning:  end() expects parameter 1 to be array, null given in /home/imarkclients/public_html/sonacircle/api/users/editProfile/index.php on line 42
+[28-Oct-2017 06:50:06 UTC] PHP Warning:  end() expects parameter 1 to be array, null given in /home/imarkclients/public_html/sonacircle/api/users/editProfile/index.php on line 44
+[28-Oct-2017 06:50:38 UTC] PHP Warning:  end() expects parameter 1 to be array, null given in /home/imarkclients/public_html/sonacircle/api/users/editProfile/index.php on line 42
+[28-Oct-2017 06:50:38 UTC] PHP Warning:  end() expects parameter 1 to be array, null given in /home/imarkclients/public_html/sonacircle/api/users/editProfile/index.php on line 44

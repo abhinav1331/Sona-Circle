@@ -1,0 +1,11 @@
+[05-Sep-2017 09:58:38 UTC] WordPress database error Unknown column 'status = 2' in 'where clause' for query SELECT * FROM `im_connects_requests` WHERE `sender_id` = 1 AND `status` = 0 OR `status = 2`
+[05-Sep-2017 09:59:21 UTC] WordPress database error Unknown column 'status = 2' in 'where clause' for query SELECT * FROM `im_connects_requests` WHERE `sender_id` = 1 AND `status` = 0 OR `status = 2`
+[05-Sep-2017 09:59:48 UTC] WordPress database error Unknown column 'status = 2' in 'where clause' for query SELECT * FROM `im_connects_requests` WHERE `sender_id` = 1 AND `status` = 0 OR `status = 2`
+[05-Sep-2017 10:00:22 UTC] PHP Parse error:  syntax error, unexpected '(array)' (array) (T_ARRAY_CAST), expecting '(' in /home/imarkclients/public_html/sonacircle/api/users/requestListSend/index.php on line 15
+[05-Sep-2017 10:00:25 UTC] PHP Parse error:  syntax error, unexpected '(array)' (array) (T_ARRAY_CAST), expecting '(' in /home/imarkclients/public_html/sonacircle/api/users/requestListSend/index.php on line 15
+[05-Sep-2017 10:28:24 UTC] WordPress database error Unknown column 'status = 2' in 'where clause' for query SELECT * FROM `im_connects_requests` WHERE `sender_id` = 1 AND `status` = 0 OR `status = 2`
+[05-Sep-2017 10:29:36 UTC] WordPress database error Unknown column 'status = 2' in 'where clause' for query SELECT * FROM `im_connects_requests` WHERE `sender_id` = 1 AND `status` = 0 OR `status = 2`
+[05-Sep-2017 10:29:48 UTC] WordPress database error Unknown column 'status = 2' in 'where clause' for query SELECT * FROM `im_connects_requests` WHERE `sender_id` = 1 AND `status` = 0 OR `status = 2`
+[05-Sep-2017 10:31:22 UTC] WordPress database error Unknown column 'status = 2' in 'where clause' for query SELECT * FROM `im_connects_requests` WHERE `sender_id` = 1 AND `status` = 0 OR `status = 2`
+[05-Sep-2017 10:32:23 UTC] WordPress database error Unknown column 'status = 2' in 'where clause' for query SELECT * FROM `im_connects_requests` WHERE `sender_id` = 1 AND `status` = 0 OR `status = 2`
+[05-Sep-2017 10:32:27 UTC] WordPress database error Unknown column 'status = 2' in 'where clause' for query SELECT * FROM `im_connects_requests` WHERE `sender_id` = 19 AND `status` = 0 OR `status = 2`

@@ -1,0 +1,202 @@
+.box-container {
+    background: #fff;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+#adminmenu .wp-menu-arrow,
+#adminmenu .wp-menu-arrow div,
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+.folded #adminmenu li.current.menu-top,
+.folded #adminmenu li.wp-has-current-submenu {
+    background: #89191a;
+}
+
+.box-container h1 {
+    font-size: 22px;
+    text-align: center;
+    background: #89191a;
+    color: #fff;
+    padding: 10px 5px;
+    text-transform: capitalize;
+}
+
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub>a.menu-top,
+#adminmenu li>a.menu-top:focus {
+    position: relative;
+    background-color: #89191a;
+    color: #fff !important;
+}
+
+#adminmenu .wp-submenu a:focus,
+#adminmenu .wp-submenu a:hover,
+#adminmenu a:hover,
+#adminmenu li.menu-top>a:focus {
+    color: #fff;
+}
+
+#adminmenu li a:focus div.wp-menu-image:before,
+#adminmenu li.opensub div.wp-menu-image:before,
+#adminmenu li:hover div.wp-menu-image:before {
+    color: #fff;
+}
+
+.bx-innr a.feed_btn {
+    font-size: 17px;
+    background: #89191a;
+    margin: 5px 0 20px;
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 7px 20px;
+    text-decoration: none;
+    box-shadow: none !important;
+}
+
+table#myTable, table#myTable1, table#myTable2 {
+    margin: 20px 0 0;
+    float: left;
+    width: 100%;
+}
+
+.bx-innr table thead , #exTab1 table thead, #myTable thead{
+    background: rgb(60, 52, 52);
+}
+
+.bx-innr table thead tr th, #exTab1 table thead tr th,  #myTable thead tr th {
+    width: 85px !important;
+    padding: 8px 18px !important;
+    color: #fff;
+}
+
+.bx-innr table tr td a {
+    color: #333;
+}
+
+.bx-innr table tr td a.btn {
+    color: #fff;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+    background-position: center left;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: #fff !important;
+    background: #4c4c4c;
+}
+
+#myForm textarea {
+    height: 115px;
+    margin: 0 0 20px;
+}
+input#find {
+    background: #89191a;
+    color: #fff;
+    border: 0 none;
+    padding: 9px 10px;
+}
+#myForm input[type="text"], .initialres form input {
+    height: 34px;
+}
+.map_canvas{width: 100%;}
+.initialres {width: 99%;}
+.initialres form {
+    margin: 30px 0 0;
+}
+.initialres button.btn.btn-success {
+    margin: 20px 0 0;
+}
+#wpbody-content{width: 98%;}
+/*div#wpbody-content .row {
+    margin: 0;
+}*/
+input.btn-success.btnExport {
+    margin: 20px 0;
+    border: 0 none;
+}
+#addcity select {
+    height: 34px;
+        width: 100%;
+}
+input.btn.btn-primary.add_city {
+    width: 100%;
+    background: #89191a;
+    border-color: #89191a;
+    box-shadow: none;
+}
+input[type=text]:focus, input[type=search]:focus, input[type=radio]:focus, input[type=tel]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, input[type=password]:focus, input[type=checkbox]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, select:focus, textarea:focus, #myForm textarea:focus {
+    border-color: #89191a;
+    -webkit-box-shadow: 0 0 2px rgba(137,25,26,.8);
+    box-shadow: 0 0 2px rgba(137,25,26,.8);
+}
+.wp-person a:focus .gravatar, a:focus, a:focus .media-icon img{ box-shadow: 0 0 2px rgba(137,25,26,.8);-webkit-box-shadow: 0 0 2px rgba(137,25,26,.8);}
+table.view-details tr th, table.view-details tr td {
+    text-align: center;
+    padding: 10px 0;
+    vertical-align: middle;
+}
+#adminmenu .awaiting-mod, #adminmenu .update-plugins{background-color: #89191a;}
+#wpcontent, #wpfooter {
+    margin-left: 155px;
+}
+.feeds_section h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+.feeds_section {
+    margin: 20px 0 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    background-color: #89191a;
+    color: #fff !important;
+}
+#exTab1 .nav>li>a{color: #000;font-weight: 700;}
+#exTab1 .nav>li>a:hover, #exTab1 .nav>li>a:focus {
+    text-decoration: none;
+    background-color: #89191a;
+    color: #fff;
+}
+div#exTab1 {
+    margin: 30px 0 0;
+}
+div#exTab1 .tab-content {
+    margin: 20px 0 0;
+}
+.paginate_button.disabled {
+    background: #ccc !important;
+    color: #000 !important;
+    cursor: not-allowed !important;
+}
+input#after-upload-btn {
+    padding: 6px 14px;
+    margin: -1px 0 0;
+}
+input#find {
+    background: #89191a;
+    color: #fff;
+    border: 0 none;
+    padding: 10px 10px;
+    /* width: 200px; */
+    margin: 13px 0 0;
+    border-radius: 5px;
+    box-shadow: none !important;
+    border: 0 none !important;
+}
+input.btn-success.btnExport {
+    margin: 35px 15px 20px;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+.usr_dtls li a{color: #000;}
+.usr_dtls li.active a, .usr_dtls li a:hover, .usr_dtls li a:focus {
+    background: #8c1812 !important;
+    color: #fff !important;
+} 

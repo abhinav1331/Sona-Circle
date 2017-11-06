@@ -1,0 +1,1 @@
+[21-Sep-2017 12:47:27 UTC] PHP Parse error:  syntax error, unexpected '$json' (T_VARIABLE) in /home/imarkclients/public_html/sonacircle/api/users/getSettings/index.php on line 32

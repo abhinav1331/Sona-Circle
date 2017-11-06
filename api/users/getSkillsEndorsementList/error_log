@@ -1,0 +1,8 @@
+[01-Sep-2017 09:20:14 UTC] PHP Warning:  include(../../wp-config.php): failed to open stream: No such file or directory in /home/imarkclients/public_html/sonacircle/api/functions/index.php on line 2
+[01-Sep-2017 09:20:14 UTC] PHP Warning:  include(): Failed opening '../../wp-config.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/imarkclients/public_html/sonacircle/api/functions/index.php on line 2
+[01-Sep-2017 09:21:18 UTC] PHP Warning:  include(../../wp-config.php): failed to open stream: No such file or directory in /home/imarkclients/public_html/sonacircle/api/functions/index.php on line 2
+[01-Sep-2017 09:21:18 UTC] PHP Warning:  include(): Failed opening '../../wp-config.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/imarkclients/public_html/sonacircle/api/functions/index.php on line 2
+[01-Sep-2017 09:40:00 UTC] PHP Warning:  include(../../wp-config.php): failed to open stream: No such file or directory in /home/imarkclients/public_html/sonacircle/api/functions/index.php on line 2
+[01-Sep-2017 09:40:00 UTC] PHP Warning:  include(): Failed opening '../../wp-config.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/imarkclients/public_html/sonacircle/api/functions/index.php on line 2
+[01-Sep-2017 09:57:51 UTC] PHP Warning:  include(../../wp-config.php): failed to open stream: No such file or directory in /home/imarkclients/public_html/sonacircle/api/functions/index.php on line 2
+[01-Sep-2017 09:57:51 UTC] PHP Warning:  include(): Failed opening '../../wp-config.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/imarkclients/public_html/sonacircle/api/functions/index.php on line 2

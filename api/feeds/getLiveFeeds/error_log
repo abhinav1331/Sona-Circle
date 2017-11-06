@@ -1,0 +1,2 @@
+[11-Oct-2017 07:29:49 UTC] PHP Parse error:  syntax error, unexpected '$feedLat' (T_VARIABLE), expecting identifier (T_STRING) in /home/imarkclients/public_html/sonacircle/api/feeds/getLiveFeeds/index.php on line 99
+[11-Oct-2017 07:30:10 UTC] PHP Parse error:  syntax error, unexpected '$feedLat' (T_VARIABLE), expecting identifier (T_STRING) in /home/imarkclients/public_html/sonacircle/api/feeds/getLiveFeeds/index.php on line 99

@@ -1,0 +1,6 @@
+[21-Sep-2017 12:23:06 UTC] PHP Warning:  include(../../wp-config.php): failed to open stream: No such file or directory in /home/imarkclients/public_html/sonacircle/api/users/getBlockedUsersList/index.php on line 2
+[21-Sep-2017 12:23:06 UTC] PHP Warning:  include(): Failed opening '../../wp-config.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/imarkclients/public_html/sonacircle/api/users/getBlockedUsersList/index.php on line 2
+[21-Sep-2017 12:23:06 UTC] PHP Fatal error:  Call to undefined function get_user_by() in /home/imarkclients/public_html/sonacircle/api/users/getBlockedUsersList/index.php on line 11
+[21-Sep-2017 12:23:25 UTC] PHP Warning:  include(../../wp-config.php): failed to open stream: No such file or directory in /home/imarkclients/public_html/sonacircle/api/users/getBlockedUsersList/index.php on line 2
+[21-Sep-2017 12:23:25 UTC] PHP Warning:  include(): Failed opening '../../wp-config.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/imarkclients/public_html/sonacircle/api/users/getBlockedUsersList/index.php on line 2
+[21-Sep-2017 12:23:25 UTC] PHP Fatal error:  Call to undefined function get_user_by() in /home/imarkclients/public_html/sonacircle/api/users/getBlockedUsersList/index.php on line 11
