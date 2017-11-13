@@ -45,7 +45,7 @@ wp_enqueue_script('custom.js');
 </div>
 
 <div class="tableResult"></div>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDnmeAJuNMz--7wK_kB84PB1NNfmJv1zBQ&libraries=places"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="<?php echo $plugin_url; ?>js/bootstrap.min.js"></script>
 <script src="<?php echo $plugin_url; ?>js/jquery.validate.js"></script>

@@ -1,4 +1,4 @@
-var link = "http://localhost/sona/";
+var link = "http://clientstagingdev.com/sonacircle/";
 jQuery(function($) {
 	jQuery('#myForm').validate({
 		submitHandler: function(form) {
