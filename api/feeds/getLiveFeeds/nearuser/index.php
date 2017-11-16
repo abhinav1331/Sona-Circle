@@ -31,7 +31,7 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 //Functions
 
 if($userID == ""|| $miles == ""|| $latitude == ""|| $longitude == "") {
-	$json = array("success" => 0, "result" => array(), "error" =>  "Location Parameters required");
+	$json = array("success" => 0, "result" => array(), "error" =>  "All Fields are Required");
 }
 else{
 	$user = get_user_by( 'ID', $userID );
@@ -103,7 +103,7 @@ else{
 		if(!empty($getMyusersGender) && $Mykeyword != "") {
 			$myKeyArraya = explode("|" , $Mykeyword);
 			foreach ($myKeyArraya as $key => $keyword) {
-				$myUsrefirst_name = $wpdb->get_results("SELECT * FROM `im_usermeta` WHERE `meta_key` = 'first_name' and `meta_value` LIKE '%".$keyword."%'");
+				$myUsrefirst_name = $wpdb->get_results("SELECT * FROM `im_usermeta` WHERE `meta_key` = 'first_name' and `meta_value` = '$keyword'");
 				foreach ($myUsrefirst_name as $key => $myUsreGende) {
 					if(in_array($myUsreGende->user_id , $getMyusersGender)) {
 						$getMyusersKeyWord[] = $myUsreGende->user_id;
@@ -191,7 +191,8 @@ else{
 				$endorseMent = $wpdb->get_var("SELECT count(`id`) FROM `im_skills_endorsement` WHERE `endorse_user` = $value");
 				$myArray[] = array("opponentID" => (int)$value , "quickBloxID" => $quickBloxID, "is_friend" => $friendStatus ,"distance" => $distance , "name" => $first_name , "age" => $age , "location" => $location , "userImageUrl" => $userImageUrl , "onlineStatus" => $onlineStatus, "onlineTime" => $timee , "endorsement" => $endorseMent);
 			}
-			
+			$myArraStr = str_replace("null",'""',json_encode($myArray));
+			$myArray = json_decode($myArraStr);
 			if($popularity == 1) {
 				$price = array();
 				foreach ($myArray as $key => $row) {
@@ -199,9 +200,7 @@ else{
 				}
 				array_multisort($price, SORT_DESC, $myArray);
 			}
-			
-$myArraStr = str_replace("null",'""',json_encode($myArray));
-			$myArray = json_decode($myArraStr);
+
 			$json = array("success" => 1, "result" => $myArray, "error" =>  "No Error Found");
 		} else {
 			$json = array("success" => 0, "result" => array(), "error" =>  "No Data Found");

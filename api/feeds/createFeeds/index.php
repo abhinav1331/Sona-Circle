@@ -24,7 +24,6 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 $userID = $_REQUEST['userID'];
 $description = $_REQUEST['description'];
 $currentTime = time();
-
 $upload_dir = wp_upload_dir();
 $date = new DateTime();
 $string = $date->getTimestamp();
@@ -41,11 +40,10 @@ else{
 		if(count($_FILES) != 0) {
 			$target_file = $upload_dir['path']."/".$string.'.jpg';
 			move_uploaded_file($_FILES["imageUrl"]["tmp_name"], $target_file);
-			/*$imageBase64Sting = base64_decode($imageUrl);
-			file_put_contents($upload_dir['path']."/".$string.'.jpg', $imageBase64Sting);*/
 			$url = $upload_dir['url']."/".$string.".jpg";	
 			$get_url_status = get_headers($url);
-			if($get_url_status[0]=="HTTP/1.1 200 OK") {  } else { $json = array("success" => 0, "result" => 0, "error" =>  "file intrupted"); json_encode($json); break;}
+
+			if($get_url_status[0]=="HTTP/1.1 200 OK") {  } else { $json = array("success" => 0, "result" => 0, "error" =>  "file intrupted"); echo json_encode($json); exit; }
 		} else {
 			$url = "";
 		}
@@ -63,7 +61,7 @@ else{
 		foreach ($getArray as $key => $value) {
 			$latitudee = get_user_meta($value->ID , "latitude" , true);
 			$longitudee = get_user_meta($value->ID , "longitude" , true);
-			$distance =  distance($myLati, $myLongi, $latitudee, $longitudee, "M");
+			$distance =  distance(floatval($myLati), floatval($myLongi), floatval($latitudee), floatval($longitudee), "M");
 			if($distance <= 30) {
 				$myArrayUsers[] = array("user_id" => $value->ID , "distance" => $distance);
 			}
@@ -83,3 +81,4 @@ else{
 	}
 }
 echo  json_encode($json);
+?>

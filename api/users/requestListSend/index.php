@@ -25,6 +25,16 @@ else{
 			if(empty($myArray)) {
 				$json = array("success" => 0, "result" => array(), "error" =>  "No Data Found");
 			} else {
+			$_data = array();
+			foreach ($myArray as $v) {
+			  if (isset($_data[$v['userID']])) {
+			    // found duplicate
+			    continue;
+			  }
+			  // remember unique item
+			  $_data[$v['userID']] = $v;
+			}
+			$myArray = array_values($_data);
 				$json = array("success" => 1, "result" => $myArray, "error" =>  "No Error Found");
 			}
 		}

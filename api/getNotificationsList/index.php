@@ -24,7 +24,7 @@ else{
 			$myArray[] = array("opponentID" => $getOpponentID , "notificationID" => $value->id , "name" => $name , "image" => $userImageUrl , "message" => $myMessage, "time" => $time , "type" => $type , "recoId" => $recoId);
 		}
 		if(empty($myArray)) {
-			$json = array("success" => 0, "result" => "null", "error" =>  "no Data Found");
+			$json = array("success" => 0, "result" => "null", "error" =>  "You have no notifications");
 		} else {
 			$json = array("success" => 1, "result" => $myArray, "error" =>  "No Error Found");
 		}

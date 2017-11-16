@@ -5,10 +5,7 @@ global $wpdb;
 $userID = $_GET['userID'];
 $searchText = $_GET['searchText'];
 $offset = $_GET['offset'];
-function cmp($a, $b)
-{
-    return strcmp($a["name"], $b["name"]);
-}
+
 if($userID == "") {
 	$json = array("success" => 0, "result" => array(), "error" =>  "Parameters Missing");
 }
@@ -19,13 +16,16 @@ else{
 	} else {
 		if($searchText == "") {
 			$myArray = array();
-			$myUser = get_users(array(
-			    'orderby' => 'display_name',
-			    'order' => 'ASC'
-			));
+			$myUser = get_users();
 			foreach ($myUser as $key => $myUsers) {
 				$myArray[] = $myUsers->ID;
 			}
+			if($offset==1) {
+			$offset=0;
+			} else {
+			$offset = ( $offset - 1 ) * 20; 
+			}
+			$myArray = array_slice( $myArray, $offset, 20 );
 
 		} else {
 
@@ -46,19 +46,19 @@ else{
 			$blockedUserArray[] = $value->user_friend_id;
 		}
 		$i=1;
-		foreach( $wpdb->get_results("SELECT * FROM `im_skills` WHERE `name` LIKE '%".$searchText."%' ORDER BY `name` ASC") as $key => $row) {
+		foreach( $wpdb->get_results("SELECT * FROM `im_skills` WHERE `name` LIKE '%".$searchText."%'") as $key => $row) {
 			$myArray[] = $row->user_id;
 		}
-		foreach( $wpdb->get_results("SELECT * FROM `im_interests` WHERE `name` LIKE '%".$searchText."%' ORDER BY `name` ASC") as $key => $row1) {
+		foreach( $wpdb->get_results("SELECT * FROM `im_interests` WHERE `name` LIKE '%".$searchText."%'") as $key => $row1) {
 			$myArray[] = $row1->user_id;
 		}
-		foreach( $wpdb->get_results("SELECT * FROM `im_education` WHERE `title` LIKE '%".$searchText."%' ORDER BY `name` ASC") as $key => $row2) {
+		foreach( $wpdb->get_results("SELECT * FROM `im_education` WHERE `title` LIKE '%".$searchText."%'") as $key => $row2) {
 			$myArray[] = $row2->user_id;
 		}
-		foreach( $wpdb->get_results("SELECT * FROM `im_education` WHERE `course_name` LIKE '%".$searchText."%' ORDER BY `name` ASC") as $key => $row3) {
+		foreach( $wpdb->get_results("SELECT * FROM `im_education` WHERE `course_name` LIKE '%".$searchText."%'") as $key => $row3) {
 			$myArray[] = $row3->user_id;
 		}
-		foreach( $wpdb->get_results("SELECT * FROM `im_experiance` WHERE `name` LIKE '%".$searchText."%' ORDER BY `name` ASC") as $key => $row4) {
+		foreach( $wpdb->get_results("SELECT * FROM `im_experiance` WHERE `name` LIKE '%".$searchText."%'") as $key => $row4) {
 			$myArray[] = $row4->user_id;
 		}
 		if(empty($myArray)) {
@@ -67,6 +67,12 @@ else{
 			$myArray = array_unique($myArray);
 		}
 		$myArray = array_diff($myArray , $blockedUserArray);
+			if($offset==1) {
+			$offset=0;
+			} else {
+			$offset = ( $offset - 1 ) * 20; 
+			}
+			$myArray = array_slice( $myArray, $offset, 20 );
 			
 		}
 			$finArray = array();
@@ -82,22 +88,6 @@ else{
 				}
 				$finArray[] = array("userID" => $myArrayVal , "name" => $ameFirst, "userImageUrl" => $userImageUrl, "profession" => $profession, "nationality" => $nationality, "onlineStatus" => $onlineStatus , "onlineTime" => $onlineTime);
 			}
-
-				$price = array();
-				foreach ($finArray as $key => $row) {
-				    	$price[] = $row['name'];
-				}
-			
-				// $finArray = usort($finArray, 'name');
-				// $finArray = array_multisort($price, SORT_ASC, SORT_STRING, $finArray);
-				
-				
-			if($offset==1) {
-			$offset=0;
-			} else {
-			$offset = ( $offset - 1 ) * 20; 
-			}
-			$finArray = array_slice( $finArray, $offset, 20 );
 			$finArray = str_replace("null",'""',json_encode($finArray));
 			$finArray = json_decode($finArray);
 			$json = array("success" => 1, "result" => $finArray, "error" =>  "No Error Found");

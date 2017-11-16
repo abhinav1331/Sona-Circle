@@ -26,6 +26,7 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
 $userID = $_GET['userID'];
 $miles1 = $_GET['miles'];
+$searchText = $_GET['searchText'];
 $latitude = $_GET['latitude'];
 $longitude = $_GET['longitude'];
 $popularity1 = $_GET['popularity'];
@@ -83,10 +84,28 @@ else{
 							$myArr[] = $wpGett->cat_id;
 						}
 						if(!empty(array_intersect($catIDArr, $myArr))) {
-							$ArragetDis[] = array("discussionsID" => $result->id , "userID" => $result->user_id , "quickBloxID" => $quickBloxID ,"name" => $name , "userImageUrl" => $userImageUrl, "title" => $result->title , "description" => $result->description , "discussion_created" => $result->discussion_created , "popularity" => $popularity , "likesCount" => $disLike , "unlikesCount" => $im_discussion_unlike, "commentsCount" => $disComment);
+							if($searchText != ""){
+								if (strpos($result->title, $searchText) !== false) {
+									$ArragetDis[] = array("discussionsID" => $result->id , "userID" => $result->user_id , "quickBloxID" => $quickBloxID ,"name" => $name , "userImageUrl" => $userImageUrl, "title" => $result->title , "description" => $result->description , "discussion_created" => $result->discussion_created , "popularity" => $popularity , "likesCount" => $disLike , "unlikesCount" => $im_discussion_unlike, "commentsCount" => $disComment);
+								} elseif (strpos($result->description, $searchText) !== false) {
+									$ArragetDis[] = array("discussionsID" => $result->id , "userID" => $result->user_id , "quickBloxID" => $quickBloxID ,"name" => $name , "userImageUrl" => $userImageUrl, "title" => $result->title , "description" => $result->description , "discussion_created" => $result->discussion_created , "popularity" => $popularity , "likesCount" => $disLike , "unlikesCount" => $im_discussion_unlike, "commentsCount" => $disComment);
+								}
+							} else {
+								$ArragetDis[] = array("discussionsID" => $result->id , "userID" => $result->user_id , "quickBloxID" => $quickBloxID ,"name" => $name , "userImageUrl" => $userImageUrl, "title" => $result->title , "description" => $result->description , "discussion_created" => $result->discussion_created , "popularity" => $popularity , "likesCount" => $disLike , "unlikesCount" => $im_discussion_unlike, "commentsCount" => $disComment);
+							}
+							
 						}
 					} else {
-						$ArragetDis[] = array("discussionsID" => $result->id , "userID" => $result->user_id , "quickBloxID" => $quickBloxID, "name" => $name , "userImageUrl" => $userImageUrl, "title" => $result->title , "description" => $result->description , "discussion_created" => $result->discussion_created , "popularity" => $popularity , "likesCount" => $disLike , "unlikesCount" => $im_discussion_unlike, "commentsCount" => $disComment);
+						if($searchText != ""){
+								if (strpos($result->title, $searchText) !== false) {
+									$ArragetDis[] = array("discussionsID" => $result->id , "userID" => $result->user_id , "quickBloxID" => $quickBloxID ,"name" => $name , "userImageUrl" => $userImageUrl, "title" => $result->title , "description" => $result->description , "discussion_created" => $result->discussion_created , "popularity" => $popularity , "likesCount" => $disLike , "unlikesCount" => $im_discussion_unlike, "commentsCount" => $disComment);
+								} elseif (strpos($result->description, $searchText) !== false) {
+									$ArragetDis[] = array("discussionsID" => $result->id , "userID" => $result->user_id , "quickBloxID" => $quickBloxID ,"name" => $name , "userImageUrl" => $userImageUrl, "title" => $result->title , "description" => $result->description , "discussion_created" => $result->discussion_created , "popularity" => $popularity , "likesCount" => $disLike , "unlikesCount" => $im_discussion_unlike, "commentsCount" => $disComment);
+								}
+							} else {
+								$ArragetDis[] = array("discussionsID" => $result->id , "userID" => $result->user_id , "quickBloxID" => $quickBloxID ,"name" => $name , "userImageUrl" => $userImageUrl, "title" => $result->title , "description" => $result->description , "discussion_created" => $result->discussion_created , "popularity" => $popularity , "likesCount" => $disLike , "unlikesCount" => $im_discussion_unlike, "commentsCount" => $disComment);
+							}
+							
 					}
 				}
 

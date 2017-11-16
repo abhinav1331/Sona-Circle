@@ -1,4 +1,5 @@
 <?php 
+
 include("../../../wp-config.php");
 global $wpdb;
 
@@ -30,7 +31,7 @@ $longitude = $_GET['longitude'];
 $offset = $_GET['offset'];
 
 if($userID == ""|| $miles1 == ""|| $latitude == ""|| $longitude == ""|| $offset == "") {
-	$json = array("success" => 0, "result" => array(), "error" =>  "All Fields are Required");
+	$json = array("success" => 0, "result" => array(), "error" =>  "Location Parameters required");
 }
 else{
 	$user = get_user_by( 'ID', $userID );

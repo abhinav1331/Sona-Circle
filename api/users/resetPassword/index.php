@@ -20,7 +20,7 @@ else{
 	$json = array("success" => 1, "result" => 1, "error" => "No Error Found");
 	}
 	else{
-	   $json = array("success" => 0, "result" => array(), "error" =>  "Old password does not match");
+	   $json = array("success" => 0, "result" => 0, "error" =>  "Old password does not match");
 	}
 	}
 }
